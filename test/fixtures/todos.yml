@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  CategoryID: 1
+  Title: MyString
+  Description: MyString
+  Completed: false
+
+two:
+  CategoryID: 1
+  Title: MyString
+  Description: MyString
+  Completed: false

@@ -1,0 +1,2 @@
+class TodoCategoriesController < ApplicationController
+end

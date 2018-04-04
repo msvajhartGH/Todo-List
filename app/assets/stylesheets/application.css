@@ -1,0 +1,213 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas, details, embed, 
+ figure, figcaption, footer, header, hgroup, 
+ menu, nav, output, ruby, section, summary,
+ time, mark, audio, video {
+     margin: 0;
+     padding: 0;
+     border: 0;
+     font-size: 100%;
+     font: inherit;
+     vertical-align: baseline;
+     box-sizing: border-box;
+ }
+ /* HTML5 display-role reset for older browsers */
+ article, aside, details, figcaption, figure, 
+ footer, header, hgroup, menu, nav, section {
+     display: block;
+ }
+ body {
+     line-height: 1;
+ }
+ ol, ul {
+     list-style: none;
+ }
+ html{
+     font-size:80%;
+ }
+ @media screen and (min-width:48em){
+    html{
+        font-size:90%;
+    }
+}
+
+@media screen and (min-width:75em){
+    html{
+        font-size:100%;
+    }
+}
+
+
+/* app styles */
+.hero__title{
+    display:block;
+    margin: 1rem 0;
+    font-size:1.75rem;
+}
+.isVisible{
+    display:block;
+}
+.isHidden{
+    display:none !important;
+}
+.app__container{
+    width:100%;
+    max-width: 1200px;
+    margin:0 auto;
+    padding: .75rem .5rem;
+    text-align: center;
+}
+
+/* forms */
+.category__container, .todo__container, .sort__container{
+    display:block;
+    margin: 0 0 1rem;
+    max-width:500px;
+    margin: 0 auto;
+}
+.title{
+    text-align: center;
+    display:block;
+    font-size: 1.25rem;
+    margin:0 0 1.25rem 0 ;
+}
+input, button, select{
+    display: block;
+    width:100%;
+    margin:0 0 .5rem;   
+    font-size:1.25rem;
+    padding:.5rem;
+    box-sizing: border-box;
+}
+input{
+    border: none;
+    border-bottom: 1px solid #64a5bb;
+    width: 100%;
+    margin-bottom: 5px;
+    padding-left: 4px;
+    box-sizing: border-box;
+}
+select{
+    border: none;
+    border-bottom: 1px solid #64a5bb;
+    width: 100%;
+    margin-bottom: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('/assets/chevron-down.png');
+    background-size: 13px 13px;
+    background-repeat: no-repeat;
+    background-position: 98% 46%;
+    font-size: 17px;
+}
+button{
+    border-radius: 5px;
+    border:1px solid #64a5bb;
+    background-color:#64a5bb;
+    color:#c2bba9;  
+    -moz-transition: all .25s ease-in;
+    -webkit-transition: all .25s ease-in;
+    -o-transition: all .25s ease-in;
+    transition: all .25s ease-in;
+}
+
+/*todo items*/
+.list__container{
+    width:100%;
+    display:block;
+    padding:8px;
+    text-align: center;
+}
+#todoList{
+    display:block;
+    margin:0 auto;
+}
+#todoList li, #todoList li div{
+    display:inline-block;
+    width:100%;
+    max-width:320px;
+}
+#todoList li{
+    min-height: 250px;
+    background:#c2bba9;
+    margin:0 1% .5rem;;
+}
+#todoList li div{
+    text-align: left;
+    padding:.25rem;
+}
+
+.todo__category:before, .todo__title:before, .todo__desc:before{
+    display:block;
+    font-size:.9rem;
+    width:100%;
+    border-bottom:1px solid black;
+}
+
+.todo__category:before{
+    content:'Category:';
+}
+
+.todo__title:before{
+    content:'Title:';
+    
+}
+.todo__desc:before{
+    content:'Description:';
+}
+
+
+
+/*response mix*/
+@media screen and (min-width:48em){
+    .category__container, .todo__container, .sort__container{
+        display:inline-block;
+        padding:.5rem;
+        width:30%;
+        vertical-align: top;
+        margin: 0 4px 1rem;
+        -webkit-box-shadow: 2px 3px 4px 2px rgba(158,158,161,1);
+        -moz-box-shadow: 2px 3px 4px 2px rgba(158,158,161,1);
+        box-shadow: 2px 3px 4px 2px rgba(158,158,161,1);
+    }
+    #todoList{
+        max-width:85%;
+    }
+    #todoList li{
+        width:30%;
+    }
+}
+
+@media screen and (min-width:75em){
+    html{
+        font-size:100%;
+    }
+    button:hover{
+        color:#64a5bb;
+        background-color:#c2bba9;
+    }
+}
